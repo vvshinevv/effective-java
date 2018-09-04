@@ -25,7 +25,7 @@ public void test_step_01() {
 Integer 객체는 42라는 동일한 값을 나타내므로, 이 표현식이 반환하는 값은 0이어야 한다. 하지만 실제로 반환되는 값은 1이다. **==** 연산자는 객체 참조를 통해 **두 객체의 identity를 비교함**을 주의하자.
 
 
-
+<br>
 ```java
 @Test
 public void test_step_02() {
