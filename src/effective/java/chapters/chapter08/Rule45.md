@@ -8,15 +8,49 @@
 **순환문을 잘 쓰면 변수의 유효범위를 최소화할 수 있다.**
 ```java
 @Test
-    public void test_step_01() {
+public void test_step_01() {
 
-        for (Integer integer : integerList1) {
-            System.out.println(integer + " ");
-        }
+    for (Integer integer : integerList1) {
+        System.out.println(integer + " ");
     }
-```
-_(test_step_01, test_step_02 예제)_ for 문이나 for-each 문을 사용하면 순환문 변수(loop variable)라는 것을 선언할 수 있는데, 그 유효범위는 선언된 지역 안으로 제한된다. 따라서 while 문보다는 for 문을 쓰는 것이 좋다.
+}
 
-'복사 - 붙여넣기' 의 버그를 조심해야 한다. _(test_step_03, test_step_04 예제)_ while 문의 경우 '복사 - 붙여넣기' 의 버그를 조심해야한다. for 문이나 for-each 문의 경우는 '복사 - 붙여넣기' 의 버그가 발생할 가능성이 줄어 든다. for 문은 while 문보다 코드 길이가 짧아서 가독성이 좋다.
+@Test
+public void test_step_02() {
+    for (Iterator i = integerList1.iterator(); i.hasNext(); ) {
+        System.out.println(i.next() + " ");
+    }
+}
+```
+for 문이나 for-each 문을 사용하면 순환문 변수(loop variable)라는 것을 선언할 수 있는데, 그 유효범위는 선언된 지역 안으로 제한된다. 따라서 while 문보다는 for 문을 쓰는 것이 좋다.
+
+***'복사 - 붙여넣기' 의 버그를 조심해야 한다.***
+```java
+@Test
+public void test_step_03() {
+    // for 문이 while 문 보다 좋은 이유
+    Iterator i1 = integerList1.iterator();
+    while (i1.hasNext()) {
+        System.out.println(i1.next() + " ");
+    }
+    // 복사 붙여넣기로 인한 실수를 유발할 수 있음
+    Iterator i2 = integerList2.iterator();
+    while (i1.hasNext()) {
+        System.out.println(i1.next() + " ");
+    }
+}
+
+@Test
+public void test_step_04() {
+    for (Iterator i1 = integerList1.iterator(); i1.hasNext(); ) {
+        System.out.println(i1.next() + " ");
+    }
+    // 컴파일 조차 되지 않음!
+    for (Iterator i2 = integerList2.iterator(); i2.hasNext(); ) {
+        System.out.println(i2.next() + " ");
+    }
+}
+```
+while 문의 경우 '복사 - 붙여넣기' 의 버그를 조심해야한다. for 문이나 for-each 문의 경우는 '복사 - 붙여넣기' 의 버그가 발생할 가능성이 줄어 든다. for 문은 while 문보다 코드 길이가 짧아서 가독성이 좋다.
 
 지역 변수의 유효범위를 최소화하는 마지막 전략은 **메서드의 크기를 줄이고 특정한 기능에 집중하라는 것**이다.
