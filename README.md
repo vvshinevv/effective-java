@@ -1,4 +1,4 @@
-# effective_java
+# effective-java
 
 ## 1장 서론
 * 클래스의 멤버로는 필드, 메서드, 멤버 클래스 그리고 멤버 인터페이스 등
