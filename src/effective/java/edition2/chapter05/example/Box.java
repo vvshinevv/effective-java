@@ -1,4 +1,4 @@
-package effective.java.edition2.chapters.chapter05.example;
+package effective.java.edition2.chapter05.example;
 
 /**
  * Created by vvshinevv on 2018. 8. 18..
