@@ -1,4 +1,4 @@
-package com.study.generic.wildcard;
+package effective.java.edition2.chapters.chapter05.example;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package effective.java.chapters.chapter04;
+package effective.java.edition2.chapters.chapter05.example;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,6 @@ public class Rule23 {
     public static void main(String[] args) {
         List<String> stringList = new ArrayList<>();
 
-        safeAdd(stringList, new Integer(42));
         String s = stringList.get(0);
     }
 
