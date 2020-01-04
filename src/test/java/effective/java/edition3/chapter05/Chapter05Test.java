@@ -1,4 +1,4 @@
-package effective.java.edition2.chapter05;
+package effective.java.edition3.chapter05;
 
 import effective.java.edition3.chapter05.study.Box;
 import effective.java.edition3.chapter05.study.BoxHandler;
