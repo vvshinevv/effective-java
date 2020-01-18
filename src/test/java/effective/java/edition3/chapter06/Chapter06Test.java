@@ -55,4 +55,9 @@ public class Chapter06Test {
         Text1 text1 = new Text1();
         text1.applyStyles(Text1.STYLE_BOLD | Text1.STYLE_ITALIC);
     }
+
+    @Test
+    public void code39_1Test() {
+        System.out.println("매개변수가 있으면 테스트에 실패한다.");
+    }
 }
