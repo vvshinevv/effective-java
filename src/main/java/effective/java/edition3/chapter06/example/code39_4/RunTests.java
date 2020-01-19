@@ -1,7 +1,5 @@
 package effective.java.edition3.chapter06.example.code39_4;
 
-import effective.java.edition3.chapter06.example.code39_2.MakerTest;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -30,12 +28,10 @@ public class RunTests {
                         System.out.println("==========================");
                     }
 
-
                 } catch (Exception e) {
                     System.out.println("잘못 사용한 테스트: " + method);
                     System.out.println("==========================");
                     throw e;
-
 
                 }
             }
