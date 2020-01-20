@@ -5,9 +5,12 @@ import effective.java.edition3.chapter06.example.code34_2.Apple;
 import effective.java.edition3.chapter06.example.code34_6.Operation34_6;
 import effective.java.edition3.chapter06.example.code34_7.Operation34_7;
 import effective.java.edition3.chapter06.example.code36_1.Text1;
+import effective.java.edition3.chapter06.example.code36_1.Text2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+
+import java.util.EnumSet;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -53,6 +56,13 @@ public class Chapter06Test {
     @Test
     public void code36_1Test() {
         Text1 text1 = new Text1();
+        System.out.println(Text1.STYLE_STRIKETHROUGH);
         text1.applyStyles(Text1.STYLE_BOLD | Text1.STYLE_ITALIC);
+    }
+
+    @Test
+    public void code36_2Test() {
+        Text2 text2 = new Text2();
+        text2.applyStyles(EnumSet.of(Text2.Style.UNDERLINE, Text2.Style.ITALIC));
     }
 }
