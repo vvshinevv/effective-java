@@ -64,5 +64,9 @@ public class Chapter06Test {
     public void code36_2Test() {
         Text2 text2 = new Text2();
         text2.applyStyles(EnumSet.of(Text2.Style.UNDERLINE, Text2.Style.ITALIC));
+
+    @Test
+    public void code39_1Test() {
+        System.out.println("매개변수가 있으면 테스트에 실패한다.");
     }
 }
